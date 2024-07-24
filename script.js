@@ -3,9 +3,33 @@ let resetBtn = document.querySelector("#reset");
 let restrtBtn = document.querySelector("#restart");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let inputP1 = document.querySelector("#in-p1");
+let inputP2 = document.querySelector("#in-p2");
+let renameB1 = document.querySelector("#btn-p1");
+let renameB2 = document.querySelector("#btn-p2");
+let scoreP1 = document.querySelector("#score-p1");
+let scoreP2 = document.querySelector("#score-p2");
 let count = 0;
 
 let turnO = true;
+inputP1.disabled = true;
+inputP2.disabled = true;
+
+renameB1.addEventListener("click", () => {
+  inputP1.disabled = false;
+  inputP1.focus();
+  inputP1.addEventListener("blur", () => {
+    inputP1.disabled = true;
+  });
+});
+
+renameB2.addEventListener("click", () => {
+  inputP2.disabled = false;
+  inputP2.focus();
+  inputP2.addEventListener("blur", () => {
+    inputP2.disabled = true;
+  });
+});
 
 const WinPattern = [
   [0, 1, 2],
@@ -75,10 +99,16 @@ const checkWinner = () => {
     if (pos1val != "" && pos2val != "" && pos3val != "") {
       if (pos1val === pos2val && pos2val === pos3val) {
         if (pos1val === "O") {
-          showWinner("Player 1");
+          scoreP1.removeAttribute("disabled");
+          scoreP1.value = parseInt(scoreP1.value) + 1;
+          scoreP1.disabled = true;
+          showWinner(inputP1.value);
           return popup("gloss");
         } else if (pos1val === "X") {
-          showWinner("Player 2");
+          scoreP2.removeAttribute("disabled");
+          scoreP2.value = parseInt(scoreP2.value) + 1;
+          scoreP2.disabled = true;
+          showWinner(inputP2.value);
         }
       }
     }

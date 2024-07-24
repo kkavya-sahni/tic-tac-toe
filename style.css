@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family:  "Shantell Sans", cursive;
 }
 body{
     height: 200vh;
@@ -11,7 +13,7 @@ body{
 
 h1{
     font-size: 10vmin; 
-    font-family: cursive; 
+     
     color: #A3DFF5;
 }
 hr{
@@ -22,13 +24,97 @@ hr{
     color: #a3dff5;
     border-radius: 2px;
     border-style:inset;
+    margin-bottom: 2vh;
+}
+
+.player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5vmin;
+    
+}
+
+.score{
+    background-color: #003459;
+    width: 10vmin;
+    height: 10vmin;
+    font-size: 1.5vmin;
+    border-radius: 10%;
+    color: #A3DFF5;
+}
+
+.points{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.points>input{
+    background-color: #003459;
+    color: #A3DFF5;
+    font-size: 3vmin;
+    width: 4vmin;
+    height: 5vmin;
+    margin-top: 10px;
+    text-align: center;
+}
+.dtls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+#player1,#player2{
+    display: flex;
+    align-items: center;
+    background-color:#003459;
+    border-radius: 10%;
+    width: 20vmin;
+    height: 10vmin;
+    font-size: 2vmin;
+    color: #A3DFF5 ;
+}
+
+
+#in-p1,#in-p2{
+    width: 70%;
+    font-size: 2.8vmin;
+    color:#A3DFF5;
+    background-color: #003459;
+    border: 0px;
+}
+
+#in-p1:focus,#in-p2:focus{
+    border: 1px solid #003459;
+
+}
+#in-p1::placeholder{
+    color: #A3DFF5;
+}
+
+#btn-p1,#btn-p2{
+    background-color: #a3dff5;
+    color: #003459;
+    
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+
+#btn-p1:hover,#btn-p2:hover{
+    box-shadow: 0 0 0.5rem #A3DFF5;
 }
 
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 60vh;
 }
 
 .game{
@@ -37,30 +123,39 @@ hr{
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5vmin;
-    height: 60vmin;
-    width: 60vmin;
+    height: 50vmin;
+    width: 50vmin;
 }
 
 .box{
     background-color: #80D3F0;
-    height: 18vmin;
-    width: 18vmin;
+    height: 15vmin;
+    width: 15vmin;
     border-radius: 10%;
     box-shadow: 0 0 1rem rgba(0,0,0,0.3);
     font-size: 10vmin;
-    font-family: cursive;
+    
     color: #003459;
+}
+
+.box:hover{
+    border: 5px solid #003459;
 }
 
 #reset{
     padding: 1rem;
     font-size: 4vmin;
-    background-color: #005F80;
+    background-color:#003459;
     color: #A3DFF5;
     border-radius: 10%;
     width: 40vmin;
     height: 10vmin;
-    font-family: cursive;
+    text-decoration: underline;
+    
+}
+
+#reset:hover,#restart:hover{
+    box-shadow: 0 0 1rem black;
 }
 
 #restart{
@@ -71,12 +166,12 @@ hr{
     border-radius: 10%;
     width: 40vmin;
     height: 10vmin;
-    font-family: cursive;
+    
 }
 
 #msg{
     font-size: 7vmin; 
-    font-family: cursive; 
+     
     color: #A3DFF5; 
 }
 
@@ -86,7 +181,7 @@ hr{
     align-items:center;
     flex-direction: column;
     gap: 2.5rem;
-    height: 100vmin;
+    height: 100vh;
 }
 
 .hide{

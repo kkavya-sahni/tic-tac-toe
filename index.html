@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="fav.webp" />
   </head>
   <body>
     <div class="msg-container hide">
@@ -14,6 +15,29 @@
 
     <h1>Tic Tac Toe</h1>
     <hr />
+    <div class="player">
+      <div id="player1">
+        <div class="dtls">
+          <input type="text" value="Player 1" id="in-p1" />
+          <button id="btn-p1">Rename</button>
+        </div>
+        <h2>O</h2>
+      </div>
+      <div class="score">
+        SCORE
+        <div class="points">
+          <input type="input" id="score-p1" value="0" disabled />
+          <input type="input" id="score-p2" value="0" disabled />
+        </div>
+      </div>
+      <div id="player2">
+        <div class="dtls">
+          <input type="text" value="Player 2" id="in-p2" />
+          <button id="btn-p2">Rename</button>
+        </div>
+        <h2>X</h2>
+      </div>
+    </div>
     <div class="container">
       <div class="game">
         <button class="box"></button>
